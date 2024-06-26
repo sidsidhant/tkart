@@ -1,0 +1,19 @@
+
+/* Add this to your CSS or SCSS file */
+.alert-popup {
+    /* Common styles for all variants */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  
+    /* Danger styles */
+    &.danger {
+      color: #721c24;
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+  
+    /* Add styles for other variants (success, info, warning) if needed */
+  }
+  

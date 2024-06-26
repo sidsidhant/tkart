@@ -1,0 +1,113 @@
+.background-banner {
+  width: 100%;
+ 
+  .test-name {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #ed7d39;
+    border-bottom: 2px solid #ed7d39;
+  }
+  .test-details-container {
+    display: flex;
+    justify-content: space-between;
+    .test-details-left {
+      display: flex;
+      gap: 150px;
+      .test-label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        span {
+          font-size: 16px;
+          line-height: 26px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.result-container {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px #eee;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.solution-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.marks-obtained {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.keycontainer {
+  .keyHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+
+.Test-duration{
+  display: flex;
+  flex-direction: column;
+}
+
+.ranking , .result-marks , .neg-marks, .attempts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.rank{
+  font-size: 35px;
+  font-weight: 600;
+  color: #ed7d39;
+}
+
+.card-header{
+  background-color: #fff;
+  color: #ed7d39;
+  font-weight: 700;
+}
+
+.sub{
+  font-weight: 600;
+}
+
+.ml-3{
+  margin-left:4rem;
+}
+
+
+.attempted-question{
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  padding: 10px 50px ;
+  .question-sr-no{
+    display: flex;
+    gap: 20px;
+  }
+}

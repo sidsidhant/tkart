@@ -1,0 +1,88 @@
+.imagePlace {
+  margin-left: -28px;
+}
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 992px) {
+  .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+  }
+  .offcanvas-body a {
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 5px;
+  }
+  .buttons {
+    display: flex;
+  }
+  .buttons Button {
+    width: 150px;
+    padding: 10px;
+  }
+  .closeButton {
+    display: block;
+  }
+}
+.closeButton {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  /* margin: 0 20px */
+}
+
+@media (max-width: 575.98px) {
+  #offcanvasNavbar-expand-xl {
+    width: 63%;
+  }
+  .offcanvas-body {
+    min-width: 90%;
+  }
+  .buttons Button {
+    width: 100px;
+    padding: 5px;
+    margin: 0px 0px 10px 10px;
+  }
+  .buttons {
+    display: flex;
+    /* flex-direction: column; */
+  }
+  .closeButton {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .closeButton {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+}
+
+#backGround {
+  background-color: rgba(251, 124, 86, 0.15);
+}
+
+.form-group .form-control-label::after {
+  content: " *";
+  color: #ff875a;
+}
+
+.error-input {
+  border: 1px solid red !important;
+  border-radius: 5px !important;
+}

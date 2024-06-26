@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@styles/*": ["src/styles/*"],
+      "@layouts/*": ["src/Layouts/*"],
+      "@components/*": ["src/components/shared/*"],
+      "@home/*": ["src/components/home/*"],
+      "@exams/*": ["src/components/exams/*"],
+      "@blogs/*": ["src/components/blogs/*"],
+      "@student/*": ["src/components/student/*"],
+      "@series/*": ["src/components/test-series/*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/store/slices/cartSlice.jsx", "src/store/index.jsx", "src/redux/slices/cartSlice.js", "src/redux/store.js"],
+  "exclude": ["node_modules"]
+}

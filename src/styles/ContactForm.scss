@@ -1,0 +1,45 @@
+// ContactForm.scss
+.contact-form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .error-border {
+      border: 1px solid red;
+    }
+
+    .form-control {
+      border-color: hsla(6, 100%, 93%, 0.71);
+      border-radius: 5px;
+      min-height: 50px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .error-contact {
+      color: red;
+      margin-top: 5px;
+    }
+  }
+
+  button {
+    width: 100%;
+    &:focus {
+      border: 1px solid grey;
+    }
+  }
+}

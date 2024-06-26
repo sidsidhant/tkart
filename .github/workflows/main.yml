@@ -1,0 +1,45 @@
+name: Deploy to Server
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - run: sudo apt-get update
+            - run: sudo apt-get install python3-pip
+            - run: pip3 install awscli
+            - run: aws configure set aws_access_key_id ${{ secrets.AWS_ECR_ACCESS_KEY_ID }}
+
+            - run: aws configure set aws_secret_access_key ${{ secrets.AWS_ECR_SECRET_ACCESS_KEY }}
+            - run: aws configure set default.region ${{ secrets.AWS_ECR_REGION }}
+
+            - name: Adding Environment Variable
+              run: echo "API_URL=${{ secrets.API_URL }}" >> .env
+
+            - name: Logging in AWS
+              run: aws ecr get-login-password --region ${{ secrets.AWS_ECR_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ECR_URL }}
+
+            - name: Building Docker image
+              run: docker build -t ${{ secrets.AWS_ECR_URL }}/cyberoze/testkart/frontend:latest .
+
+            - name: Pushing Docker image
+              run: docker push ${{ secrets.AWS_ECR_URL }}/cyberoze/testkart/frontend:latest
+
+            - name: SSH key Setup
+              run: |
+                mkdir -p ~/.ssh/
+                echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/key.pem
+                chmod 600 ~/.ssh/key.pem
+                ssh-keyscan -H ${{ vars.server_ip }} >> ~/.ssh/known_hosts
+
+            - name: SSH Into Server
+              run: |
+                ssh -i ~/.ssh/key.pem ubuntu@${{ vars.server_ip }} "export PATH="/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ubuntu/.local/bin" && aws ecr get-login-password --region ${{ secrets.AWS_ECR_REGION }} | docker login --username AWS --password-stdin ${{ secrets.AWS_ECR_URL }} && docker pull ${{ secrets.AWS_ECR_URL }}/cyberoze/testkart/frontend:latest && docker stop frontend && docker rm frontend && docker rmi ${{secrets.AWS_ECR_URL}}/cyberoze/testkart/frontend:current && docker tag ${{secrets.AWS_ECR_URL }}/cyberoze/testkart/frontend:latest ${{secrets.AWS_ECR_URL}}/cyberoze/testkart/frontend:current && docker run -d --name frontend -p 3000:3000 ${{ secrets.AWS_ECR_URL }}/cyberoze/testkart/frontend:current"

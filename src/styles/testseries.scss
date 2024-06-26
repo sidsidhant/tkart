@@ -1,0 +1,138 @@
+.test-series-container {
+  background: #f9f6f2;
+  position: relative;
+  display: flex;
+  padding: 50px 0;
+  background-repeat: no-repeat;
+  filter: brightness(200px);
+  .test-series-details {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    h1 {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 500;
+      max-width: 500px;
+    }
+    h2 {
+      display: flex;
+      width: max-content;
+      padding: 0 10px;
+      font-size: 18px;
+      color: #da5908d4;
+      line-height: 36px;
+      font-weight: 600;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 12px;
+      background: #fccfcf;
+    }
+    .academy-details {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 600;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .free-tests {
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 600;
+    }
+  }
+}
+.mr-5{
+  margin-right:5rem;
+}
+
+.sub{
+  margin-bottom:20px;
+}
+.test-series-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  // max-width: 400px;
+  justify-content: end;
+  margin-top: -200px;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px #ede9fe;
+  border: 1px solid var(--bg-white);
+  z-index: 9;
+  position: relative;
+  .cover-image {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .card-content {
+    padding: 30px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    span {
+      display: flex;
+      width: max-content;
+      padding: 0 10px;
+      font-size: 18px;
+      color: #da5908d4;
+      line-height: 36px;
+      font-weight: 600;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      border-radius: 12px;
+      background: #fccfcf;
+    }
+    label {
+      font-size: 18px;
+      line-height: 1.5 !important;
+      font-weight: 500;
+    }
+    .academy-details {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+    }
+  }
+  .test-series-price {
+    padding: 0px 10px 0px 10px;
+    .content {
+      display: flex;
+      justify-content: space-between;
+      label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      span {
+        font-weight: 600;
+        color: #e54860;
+      }
+    }
+    .normal {
+      span {
+        color: #626262;
+      }
+    }
+  }
+}
+
+.master-skill{
+  margin: 50px 0px;
+}
+
+@media screen and (max-width: 767.97px) {
+  .test-series-card{
+    margin-top: 10px;
+  }
+
+
+  
+}
