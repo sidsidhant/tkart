@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Faqs(props: { faqs: any }) {
+const Faqs = (props: { faqs: any }) => {
   const faqs = props.faqs || [];
   return (
     <section id="faq" className="faq section-bg py-5">
@@ -37,4 +35,6 @@ export default function Faqs(props: { faqs: any }) {
       </div>
     </section>
   );
-}
+};
+
+export default Faqs;

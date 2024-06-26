@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import logo from "../public/assets/images/login-img.png";
 import Image from "next/image";
 
@@ -43,7 +44,7 @@ const ForgetPassword = () => {
                 <div className="img-logo">
                   {/* <img src="assets/img/logo.svg" className="img-fluid" alt="Logo" /> */}
                   <div className="back-home">
-                    <a href="/">Back to Home</a>
+                    <Link href="/">Back to Home</Link>
                   </div>
                 </div>
                 <h1>Forgot Password ?</h1>

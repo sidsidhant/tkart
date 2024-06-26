@@ -7,13 +7,13 @@ const index = () => {
       <div className="main-wrapper">
         <div className="error-box">
           <div className="error-logo">
-            <a href="index.html">
+            <Link href="index.html">
               <img
                 src="../assets/images/testkart.svg"
                 className="img-fluid"
                 alt="Logo"
               />
-            </a>
+            </Link>
           </div>
           <div className="error-box-img">
             <img src="../assets/images/error-01.png" className="img-fluid" />

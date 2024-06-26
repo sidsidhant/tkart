@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en-IN">
       <Head>
-        <link rel="icon" href="/fav.png" />
+        <link rel="icon" href="/favicon.ico" />
 
         <script
           id="google-analytics"

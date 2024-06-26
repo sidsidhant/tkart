@@ -9,7 +9,8 @@
       "@exams/*": ["src/components/exams/*"],
       "@blogs/*": ["src/components/blogs/*"],
       "@student/*": ["src/components/student/*"],
-      "@series/*": ["src/components/test-series/*"]
+      "@series/*": ["src/components/test-series/*"],
+      "@containers/*": ["src/containers/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

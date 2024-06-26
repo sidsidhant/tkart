@@ -17,7 +17,11 @@ export default function TestSeriesCard(props: any) {
   const testSeriesCard = (hash: string) => {
     // console.log(path,alreadyBuy)/
     localStorage.setItem("path", `/test-series/${hash}`);
-    if (path === "/student-profile" || path === "/test-series" || path === "/") {
+    if (
+      path === "/student-profile" ||
+      path === "/test-series" ||
+      path === "/"
+    ) {
       const studentId = localStorage.getItem("studentId");
       router.push(`/test-series/${hash}?student_id=${studentId}`);
     } else {
@@ -28,7 +32,7 @@ export default function TestSeriesCard(props: any) {
     const duration = moment.duration(data.total_duration, "minutes");
     const formattedTime = moment.utc(duration.asMilliseconds()).format("HH:mm");
     setTime(formattedTime);
-  }, [time]);
+  }, [time, data.total_duration]);
 
   return (
     <div
@@ -106,7 +110,7 @@ export default function TestSeriesCard(props: any) {
                   <i className="fa fa-gift" aria-hidden="true"></i> Take Free
                   Test
                 </button>
-              ) : data?.is_purchased  ? (
+              ) : data?.is_purchased ? (
                 <>
                   <button className="start-test">
                     <i className="fa fa-gift" aria-hidden="true"></i> Attempt
@@ -126,7 +130,9 @@ export default function TestSeriesCard(props: any) {
             <p className="mb-0 buy-text">
               {data?.price === 0 ? (
                 <span className=""></span>
-              ) : data?.is_purchased ? <></>: (
+              ) : data?.is_purchased ? (
+                <></>
+              ) : (
                 "₹ " + data?.price
               )}
             </p>

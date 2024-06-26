@@ -89,7 +89,7 @@ export default function Exams(props: { exams: any }) {
                         <img
                           src={
                             item?.exam_content?.logo ||
-                            "https://testkart.in/fav.png"
+                            "https://testkart.in/logo.png"
                           }
                           alt="Testkart"
                           className=""

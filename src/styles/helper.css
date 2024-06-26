@@ -1586,8 +1586,9 @@ body {
 /* test series detail page */
 
 .courses-widget {
+  @apply p-4;
   background: #fff;
-  padding: 30px 30px;
+  /* padding: 30px 30px; */
   margin-bottom: 30px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

@@ -112,6 +112,7 @@ const Index: React.FC = () => {
 
                             <label
                               className="form-check-label"
+                              htmlFor={`cat_${index}`}
                               onClick={() => handleFilterClick(elem.exam.slug)}
                             >
                               {elem.exam.slug}
@@ -134,7 +135,7 @@ const Index: React.FC = () => {
             {/* products cards will come here */}
             <div className="product-cards row">
               {filterData.map((elem, index) => (
-                <div className="col-md-4 mb-3" key={index}>
+                <div className="col-md-6 col-lg-4 my-2" key={index}>
                   <TestSeriesCard data={elem} />
                 </div>
               ))}

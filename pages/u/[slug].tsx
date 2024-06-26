@@ -41,7 +41,7 @@ const AcademyDetails = (props: any) => {
                   <div className="profile-info-img border-0">
                     {data && (
                       <Image
-                        src={data?.logo || "https://testkart.in/fav.png"}
+                        src={data?.logo || "https://testkart.in/logo.png"}
                         height={1000}
                         width={1000}
                         alt=""

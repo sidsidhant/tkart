@@ -6,7 +6,7 @@ import SeriesList from "@series/SeriesList";
 import Faqs from "@components/faqs/Faqs";
 import { _request } from "src/utils/request.util";
 import { useEffect } from "react";
-import Index from "src/containers/testSeries";
+import Index from "@containers/TestSeries";
 
 const TestSeries: NextPage = (props: any) => {
   const data = props.data;

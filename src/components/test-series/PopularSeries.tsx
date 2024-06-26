@@ -25,7 +25,7 @@ export default function PopularSeries(props: any) {
                         <img
                           src={
                             item?.exam_content?.logo ||
-                            "https://testkart.in/fav.png"
+                            "https://testkart.in/logo.png"
                           }
                           width="80"
                           alt={item?.exam}
